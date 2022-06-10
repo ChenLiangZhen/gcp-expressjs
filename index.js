@@ -8,11 +8,13 @@ app.use(cors())
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
-app.get("/api", (req, res)=>{
+app.get("/api/gcp", (req, res)=>{
 	res.send(`your email is: this is amazing!!!`)
 })
 
-const PORT= 3000;
+const PORT= 3001;
 app.listen(PORT, ()=>{
 	console.log(`App is running on port ${PORT}`)
 })
+
+module.exports = app
